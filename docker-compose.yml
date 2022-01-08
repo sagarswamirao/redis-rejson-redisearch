@@ -1,0 +1,12 @@
+version: "3.0"
+
+services:
+  redis_rejson:
+    container_name: redis-rejson-redisearch
+    image: sagarswamirao/redis-rejson-redisearch
+    volumes:
+      - /root/redis:/usr/local/etc/
+    ports:
+      - 6391:6379
+    command: /usr/local/etc/redis.conf
+    restart: always
